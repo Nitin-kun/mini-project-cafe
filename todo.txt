@@ -1,0 +1,46 @@
+Environment Variables: Move your Firebase config to .env file:
+
+env
+Copy
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+# ... other config values
+Update firebase.js to use environment variables:
+
+javascript
+Copy
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  // ... other config
+};
+Security Rules: Make sure you have proper Firestore rules set up in Firebase Console.
+
+Error Handling: Add more comprehensive error handling for auth and database operations.
+
+
+
+Create a .env file in your project root:
+
+env
+Copy
+VITE_FIREBASE_API_KEY=AIzaSyDUddFts7Yg6Qp2v9RVVrP3cw0UY-HRQvw
+VITE_FIREBASE_AUTH_DOMAIN=mini-project-website-b1e02.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=mini-project-website-b1e02
+VITE_FIREBASE_STORAGE_BUCKET=mini-project-website-b1e02.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=90701846986
+VITE_FIREBASE_APP_ID=1:90701846986:web:2206865bd25219ee979733
+VITE_FIREBASE_MEASUREMENT_ID=G-0F3DEL0BEZ
+Then update your firebase.js config to:
+
+javascript
+Copy
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+};
