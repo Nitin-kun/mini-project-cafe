@@ -4,16 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
 // Import all your images at the top of the file
-import Cappuccino from './assets/Cappuccino.webp';
-import Latte from './assets/late.jpg';
-import Espresso from './assets/espresso.webp';
-import Mocha from './assets/mocha.webp';
-import ColdBrew from './assets/cold.jpg';
-import BlueberryMuffin from './assets/Blueberry.jpg';
-import Croissant from './assets/croissant.jpg';
-import ChaiLatte from './assets/chai.webp';
-import IcedCoffee from './assets/iced.jpg';
-import AvocadoToast from './assets/avocado.jpg';
+import Cappuccino from '../assets/Cappuccino.webp';
+import Latte from '../assets/late.jpg';
+import Espresso from '../assets/espresso.webp';
+import Mocha from '../assets/mocha.webp';
+import ColdBrew from '../assets/cold.jpg';
+import BlueberryMuffin from '../assets/Blueberry.jpg';
+import Croissant from '../assets/croissant.jpg';
+import ChaiLatte from '../assets/chai.webp';
+import IcedCoffee from '../assets/iced.jpg';
+import AvocadoToast from '../assets/qavocado.jpg';
 
 // Then update your menuItems array:
 
