@@ -13,7 +13,7 @@ import BlueberryMuffin from '../assets/Blueberry.jpg';
 import Croissant from '../assets/croissant.jpg';
 import ChaiLatte from '../assets/chai.webp';
 import IcedCoffee from '../assets/iced.jpg';
-import AvocadoToast from '../assets/qavocado.jpg';
+import AvocadoToast from '../assets/avocado.jpg';
 
 // Then update your menuItems array:
 
