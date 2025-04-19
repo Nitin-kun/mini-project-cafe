@@ -3,6 +3,19 @@ import { initializeApp } from "firebase/app";
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
+// Import all your images at the top of the file
+import Cappuccino from './assets/Cappuccino.webp';
+import Latte from './assets/late.jpg';
+import Espresso from './assets/espresso.webp';
+import Mocha from './assets/mocha.webp';
+import ColdBrew from './assets/cold.jpg';
+import BlueberryMuffin from './assets/Blueberry.jpg';
+import Croissant from './assets/croissant.jpg';
+import ChaiLatte from './assets/chai.webp';
+import IcedCoffee from './assets/iced.jpg';
+import AvocadoToast from './assets/avocado.jpg';
+
+// Then update your menuItems array:
 
 // Firebase configuration
 const firebaseConfig = {
@@ -21,16 +34,16 @@ const db = getFirestore(app);
 
 // Menu data
 const menuItems = [
-  { id: 1, name: 'Cappuccino', description: 'Espresso with steamed milk foam', price: 150, category: 'hot', popular: true, image: 'src/assets/Cappuccino.webp' },
-  { id: 2, name: 'Latte', description: 'Espresso with steamed milk', price: 140, category: 'hot', popular: true, image: 'src/assets/late.jpg' },
-  { id: 3, name: 'Espresso', description: 'Strong and bold coffee shot', price: 100, category: 'hot', image: 'src/assets/espresso.webp' },
-  { id: 4, name: 'Mocha', description: 'Chocolate flavored coffee', price: 160, category: 'hot', image: 'src/assets/mocha.webp' },
-  { id: 5, name: 'Cold Brew', description: 'Cold coffee brew for 12 hours', price: 180, category: 'cold', popular: true, image: 'src/assets/cold.jpg' },
-  { id: 6, name: 'Blueberry Muffin', description: 'Freshly baked with real blueberries', price: 90, category: 'food', image: 'src/assets/Blueberry.jpg' },
-  { id: 7, name: 'Croissant', description: 'Buttery and flaky pastry', price: 80, category: 'food', popular: true, image: 'src/assets/croissant.jpg' },
-  { id: 8, name: 'Chai Latte', description: 'Spiced tea with steamed milk', price: 120, category: 'hot', image: 'src/assets/chai.webp' },
-  { id: 9, name: 'Iced Coffee', description: 'Chilled coffee with milk', price: 130, category: 'cold', image: 'src/assets/iced.jpg' },
-  { id: 10, name: 'Avocado Toast', description: 'Sourdough with avocado spread', price: 150, category: 'food', image: 'src/assets/avocado.jpg' }
+  { id: 1, name: 'Cappuccino', description: 'Espresso with steamed milk foam', price: 150, category: 'hot', popular: true, image: Cappuccino },
+  { id: 2, name: 'Latte', description: 'Espresso with steamed milk', price: 140, category: 'hot', popular: true, image: Latte },
+  { id: 3, name: 'Espresso', description: 'Strong and bold coffee shot', price: 100, category: 'hot', image: Espresso },
+  { id: 4, name: 'Mocha', description: 'Chocolate flavored coffee', price: 160, category: 'hot', image: Mocha },
+  { id: 5, name: 'Cold Brew', description: 'Cold coffee brew for 12 hours', price: 180, category: 'cold', popular: true, image: ColdBrew },
+  { id: 6, name: 'Blueberry Muffin', description: 'Freshly baked with real blueberries', price: 90, category: 'food', image: BlueberryMuffin },
+  { id: 7, name: 'Croissant', description: 'Buttery and flaky pastry', price: 80, category: 'food', popular: true, image: Croissant },
+  { id: 8, name: 'Chai Latte', description: 'Spiced tea with steamed milk', price: 120, category: 'hot', image: ChaiLatte },
+  { id: 9, name: 'Iced Coffee', description: 'Chilled coffee with milk', price: 130, category: 'cold', image: IcedCoffee },
+  { id: 10, name: 'Avocado Toast', description: 'Sourdough with avocado spread', price: 150, category: 'food', image: AvocadoToast }
 ];
 
 const categories = [
